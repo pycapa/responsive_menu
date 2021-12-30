@@ -1,0 +1,170 @@
+// css file
+
+//variables
+
+$yellow-color : #F4B942;
+$yellow-color-dark : #a0792a;
+$dark-color : #202131;
+$white : #cdcdcd;
+
+
+//media query
+@media (max-width: 735px) {
+    .botton-toggler-icon{
+        visibility: visible!important;
+    }
+    .menu-collapse{
+        visibility: hidden!important;
+    }
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: none;
+    overflow: hidden;
+}
+
+body{
+    background: $dark-color;
+    text-align: center;
+}
+
+h1,p{
+    color: $white;
+}
+
+.navbar{
+    display: flex;
+    justify-content: start;
+    padding: 1rem;
+
+
+    .container{
+        display: flex;
+        height: auto;
+        align-items: center;
+        flex-wrap: wrap;
+        .nav-logo-box{
+            background: $yellow-color;
+            height: inherit;
+            padding: 1rem;
+            
+            a{
+                text-decoration: none;
+                color: #121220;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-weight: 600;
+                font-size: 1.5rem;
+                flex-wrap: wrap
+
+            }
+        }
+
+    }
+    .nav{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+            padding: 1px;
+            margin: 0 1rem ;
+            list-style: none;
+            a{
+                color:$yellow-color;
+                text-decoration: none;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .nav-item:hover a{
+        color: $yellow-color-dark;
+    }
+
+    // Diseñar el boton.
+    #toggle-button{
+        display: none;
+    }
+    .button-toggler{
+        width: 2rem;
+        height: 2rem;
+        background: $yellow-color;
+        border: none;
+    }
+    .botton-toggler-icon{
+        background: #121220;
+        color: $yellow-color;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        right: 1rem;
+        top: 1rem;
+        display: flex;
+        position: absolute;
+        visibility: hidden;
+
+    }
+
+    .botton-toggler-icon:hover{
+        color: #121220;
+        background: $yellow-color;
+        transition: 1s;
+    }
+    
+    #check{
+        display: none!important;
+    }
+}
+
+// resposive - behavior
+.show-menu{
+    visibility: visible!important;
+}
+
+.show-checked-button{
+    color: #121220!important;
+    background: $yellow-color!important;
+
+}
+
+.menu-responsive{
+    transition: 0.5s;
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+    }
+    background-color: $yellow-color!important;
+    justify-content: center;
+    height: 100vh;
+    .nav-logo-box{
+        top:1rem;
+        position: fixed;
+    }
+    .menu-collapse{
+        margin-top: -1rem;
+        .nav{
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            a{
+                color: black;
+            }
+            li{
+                margin-bottom: 1rem;
+                width: 15rem;
+                background-color: $yellow-color-dark;
+                border-radius: 10px;
+                padding: 5px;
+                transition: 0.1s;
+
+            }
+            li:hover a{
+                color: blanchedalmond;
+            }
+        }
+    }
+
+}
